@@ -7,7 +7,7 @@ using namespace std;
 
 
 int mas[M];
-
+// test VCS
 int main()
 {
     int i,ch,p;
