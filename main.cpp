@@ -13,7 +13,7 @@ int main()
     int i,ch,p=M,exs=0;
     for (i = 0; i < M; i++)
     {
-        mas[i] = i + 1;
+        mas[i] = 100 + i + 1;
     }
 
 	for (i = 0; i < M; i++)
@@ -28,9 +28,9 @@ int main()
     {
         if (ch <= mas[p])
         {
-            if(ch==p || ch+1==p || ch-1==p)
+            if(ch==mas[p] || ch+1==mas[p] || ch-1==mas[p])
             {
-                cout<<p;
+                cout<<""<<mas[p-1]<<"    and     "<<mas[p+1];
                 return 0;
 
             }
@@ -38,9 +38,9 @@ int main()
         }
         else
         {
-            if(ch==p|| ch+1==p || ch-1==p)
+            if(ch==mas[p]|| ch+1==mas[p] || ch-1==mas[p])
             {
-                cout<<p;
+                cout<<""<<mas[p-1]<<"    and     "<<mas[p+1];
                 return 0;
 
             }
