@@ -3,14 +3,14 @@
 
 using namespace std;
 
-#define  M  10
+#define  M  100
 
 
 int mas[M];
 // test VCS
 int main()
 {
-    int i,ch,p,exs;
+    int i,ch,p=M,exs=0;
     for (i = 0; i < M; i++)
     {
         mas[i] = i + 1;
@@ -23,27 +23,30 @@ int main()
 	cout<<endl<<"введи число : ";
 
     cin >> ch;
-
+    p = p/ 2;
     do
     {
-        p = M / 2;
         if (ch <= mas[p])
         {
-            p=p-p/2;
-            if(ch==p)
+            if(ch==p || ch+1==p || ch-1==p)
             {
-                exs=1;
+                cout<<p;
+                return 0;
+
             }
+            p=p-p/2;
         }
         else
         {
-            p=p+p/2;
-            if(ch==p)
+            if(ch==p|| ch+1==p || ch-1==p)
             {
-                exs=1;
+                cout<<p;
+                return 0;
+
             }
+            p=p+p/2;
         }
-    } while (exs==1);
+    } while (exs=1);
 
 
 //    system("pause");
