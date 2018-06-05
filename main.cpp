@@ -10,13 +10,19 @@ int mas[M];
 // test VCS
 int main()
 {
-    int i,ch,p;
+    int i,ch,p,exs;
     for (i = 0; i < M; i++)
     {
         mas[i] = i + 1;
     }
-    cin >> ch;
 
+	for (i = 0; i < M; i++)
+	{
+		cout << mas[i] << " ";
+	}
+	cout<<endl<<"введи число : ";
+
+    cin >> ch;
 
     do
     {
@@ -26,7 +32,7 @@ int main()
             p=p-p/2;
             if(ch==p)
             {
-                break;
+                exs=1;
             }
         }
         else
@@ -34,19 +40,12 @@ int main()
             p=p+p/2;
             if(ch==p)
             {
-                break;
+                exs=1;
             }
         }
-    } while (i=999);
+    } while (exs==1);
 
 
-/*
-	for (i = 0; i < M; i++)
-	{
-		cout << mas[i] << " ";
-	}
-*/
-
-    system("pause");
-    return 0;
+//    system("pause");
+//    return 0;
 }
